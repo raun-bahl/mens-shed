@@ -12,10 +12,14 @@ code {
     monospace;
 }
 
-
-.card {
-	max-width: 25%;
+.main-display {
+	padding: 50px;
+	padding-top:0;
 }
+
+/*.card {
+	max-width: 25%;
+}*/
 .item {
 	margin-left: 50px;
 }
@@ -26,7 +30,7 @@ code {
 }
 
 .scrollable-imgs {
-	min-width: 100%;
+	max-width: 400px;
 	min-height: 200px;
 }
 
@@ -55,6 +59,6 @@ code {
 }
 
 .card-desc {
-	max-width: 60%;
+	max-width: 50%;
 }
 
