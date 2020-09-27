@@ -11,3 +11,50 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.card {
+	max-width: 25%;
+}
+.item {
+	margin-left: 50px;
+}
+
+.recording-container {
+	min-width: 100%;
+	min-height: 100px;
+}
+
+.scrollable-imgs {
+	min-width: 100%;
+	min-height: 200px;
+}
+
+.scrolling-wrapper {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	padding-bottom: 15px;
+
+}
+
+.photo {
+	width: 150px;
+	height:150px;
+	flex: 0 0 auto;
+}
+
+
+
+
+
+
+.description-text {
+	max-width: 400px;
+	min-height: 100px;
+}
+
+.card-desc {
+	max-width: 60%;
+}
+

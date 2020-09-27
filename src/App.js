@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import CardList from './CardList';
+import SearchBox from './SearchBox';
+import { users } from './users';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends Component {
+
+  constructor() {
+    super()
+    this.state = {
+      users: users,
+      search_field: ''
+    }
+  }
+
+  // componentDidMount() {
+    //might need this later
+  // }
+
+  onSearchChange = (event) => {
+    this.setState({search_field: event.target.value})
+  }
+
+  render() {
+    const filteredUsers = this.state.users.filter( users => {
+      return users.name.toLowerCase().includes(this.state.search_field.toLowerCase());
+    })
+
+    return (
+      <div className = "tc">
+        <h1> Men's Shed App </h1>
+        <SearchBox searchChange = {this.onSearchChange} />
+        <CardList users = {filteredUsers} />
+      </div>
+    );
+  }
+
 }
+
+
 
 export default App;
