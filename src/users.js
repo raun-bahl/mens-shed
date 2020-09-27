@@ -5,9 +5,9 @@ export const users = [
 	{
 		id: 1,
 		name: 'Ben Howard',
-		date: '28th September 2018',
+		date: '20th September 2020',
 		title: 'Recyclable Crib',
-		description:  'Lorem ipsum dolor epsum et sdlsllsllsldlsdlsldlsldlsdlsl d sldsldksldklskd  ksjdlajdfldsf kfnlsfjldsjfs fdosnflsdjf'
+		description:  'i\'m really proud of this crib that I made which is 100% recylable. Made it for the orphanage in Sunnybank.'
 	},
 	{
 		id: 2,

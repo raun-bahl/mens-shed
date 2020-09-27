@@ -25,7 +25,7 @@ code {
 }
 
 .recording-container {
-	min-width: 100%;
+	max-width: 400px;
 	min-height: 100px;
 }
 
@@ -43,6 +43,7 @@ code {
 }
 
 .photo {
+	padding:5px;
 	width: 150px;
 	height:150px;
 	flex: 0 0 auto;
@@ -60,5 +61,12 @@ code {
 
 .card-desc {
 	max-width: 50%;
+}
+
+
+.sound-wave {
+	width: 400px;
+	height: 100px;
+	background-color: transparent;
 }
 

@@ -1,9 +1,11 @@
 import React from 'react';
 import './index.css';
+import { users } from './users';
+import Mic from './Mic.js';
+
 
 const Card = (props) => {
 	const {name, date, title, description} = props;
-	console.log(date);
 	return (
 		<div className = 'tc bg-lightest-blue dib br3 pa3 ma2 grow bw2 shadow-5'>
 			<div className = "flex justify-between">
@@ -13,15 +15,16 @@ const Card = (props) => {
 				</div>
 			</div>
 			<div className = "recording-container">
+				<Mic />
 			</div>
 			<div className = "scrollable-imgs">
 			
 				<div className = "scrolling-wrapper">
-					<div className = "photo"> <img src = {require("./img_avatar.png")} alt = "profile_img"/> </div>
-					<div className = "photo"> <img src = {require("./img_avatar.png")} alt = "profile_img"/> </div>
-					<div className = "photo"> <img src = {require("./img_avatar.png")} alt = "profile_img"/> </div>
-					<div className = "photo"> <img src = {require("./img_avatar.png")} alt = "profile_img"/> </div>
-					<div className = "photo"> <img src = {require("./img_avatar.png")} alt = "profile_img"/> </div>
+					<div className = "photo"> <img src = {require("./1.jpeg")} alt = "profile_img"/> </div>
+					<div className = "photo"> <img src = {require("./1.jpeg")} alt = "profile_img"/> </div>
+					<div className = "photo"> <img src = {require("./1.jpeg")} alt = "profile_img"/> </div>
+					<div className = "photo"> <img src = {require("./1.jpeg")} alt = "profile_img"/> </div>
+
 				</div> 
 			
 			</div>
