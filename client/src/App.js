@@ -12,9 +12,8 @@ import {
   Redirect
 } from "react-router-dom";
 
-function App(props) {
+function App() {
 
-  const [card] = props
 
   const [state, setState] = useState({
     users: []
@@ -43,7 +42,6 @@ function App(props) {
             <a className="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-black" href =  "#" onClick = {handleClick}>Add Story</a>
             <Link to = "/upload"> Upload a Story </Link>
             </div>
-            {state.users}
   </div> 
 }
 

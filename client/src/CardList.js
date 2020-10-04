@@ -20,7 +20,11 @@ import Card from './Card';
 // }
 
 const CardList = ({props}) => {
-	// const {key, id, name, date, title, description, imgPath} = props;
+	const {key, id, name, date, title, description, imgPath} = props;
+	console.log(key);
+	console.log(name);
+	console.log(title);
+	console.log(imgPath);
 }
 
 export default CardList;

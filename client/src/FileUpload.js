@@ -11,7 +11,7 @@
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [name, setName] = useState('');
-  const [newCard, SetCard] = useState({});
+  const [newCard, setCard] = useState({});
 
 
   var date = new Date()
@@ -61,17 +61,17 @@
 
   /* this should submit the card to App */
   const handleClick = () => {
-      // return <Card 
-      // key = {0}
-      // id = {'1'}
-      // name = {name}
-      // date = {str}
-      // title = {title}
-      // description = {description}
-      // imgPath = {uploadedFile.filePath}
-      // />
-      console.log({newCard});
-      //return <CardList card = {newCard} />
+    //setCard('0', '1', name, str, title, description, uploadedFile.filePath);
+      return <Card 
+      key = {0}
+      id = {'1'}
+      name = {name}
+      date = {str}
+      title = {title}
+      description = {description}
+      imgPath = {uploadedFile.filePath}
+      />
+    //return <CardList card = {newCard} />
   }
  	
  	return (
@@ -121,7 +121,16 @@
           </div>
         </form>
       <a className="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-black" href =  "#" onClick = {handleClick}>Add Story</a>
-      SetCard({'0','1',name,str,title,description,uploadedFile.filePath})
+      <Card 
+        key = {0}
+        id = {'1'}
+        name = {name}
+        date = {str}
+        title = {title}
+        description = {description}
+        imgPath = {uploadedFile.filePath}
+      />
+
  		</Fragment>
 
  	);
