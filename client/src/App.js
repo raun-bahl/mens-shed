@@ -4,6 +4,7 @@ import Card from './Card';
 import SearchBox from './SearchBox';
 import { users } from './users';
 import FileUpload from './FileUpload';
+import './index.css';
 import {
   BrowserRouter as Router,
   Switch,
@@ -35,14 +36,40 @@ function App() {
 }
 
   const MainDisplay = () => {
+  return         <div className = "flex justify-between">
+          <div className = "tc">
+            <div className = "main-display">
+              <h1 className = "f-subheadline lh-title"> Men's Shed App </h1>      
+            </div>
+          </div>
+          <div className = "main-button">
+            <Link to = "/choose">
+            <a className="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-black">Add a Story</a>
+            </Link>
+          </div>
+        </div>
+}
+
+  const Choose = () => {
   return <div className = "tc">
           <div className = "main-display">
-            <h1 className = "f-subheadline lh-title"> Men's Shed App </h1>                                                                                          
+            <h1 className = "f-subheadline lh-title"> What would you like to add? </h1> 
+            <div className="flex flex-column width">
+              <Link to  = "/announcement-upload">
+                <a class="f6 grow no-underline br-pill ba bw1 ph3 pv2 mb2 dib black" href="#0">Make an Announcement</a>
+              </Link>
+              <Link to = "/story-upload">
+                <a class="f6 grow no-underline br-pill ba bw1 ph3 pv2 mb2 dib dark-green" href="#0">Share a Story</a>
+              </Link>
+              <Link to = "/project-upload">
+                <a class="f6 grow no-underline br-pill ba bw1 ph3 pv2 mb2 dib blue" href="#0">Add a Project</a>
+              </Link>
+            </div>                                                                                   
             {/*<SearchBox searchChange = {this.onSearchChange} /> */}
-            <a className="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-black" href =  "#" onClick = {handleClick}>Add Story</a>
-            <Link to = "/upload"> Upload a Story </Link>
+             {/*<a className="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-black" href =  "#" onClick = {handleClick}>Add Story</a>
+            <Link to = "/upload"> Upload a Story </Link> */}
             </div>
-  </div> 
+          </div> 
 }
 
   // componentDidMount() {
@@ -55,18 +82,18 @@ function App() {
 
 
    const handleClick = () => {
-    // setState({
-    //   users: [ 
-    //   state.users,
-    //           <Card
-    //           key = {0} 
-    //           id = {users[0].id} 
-    //           name  = {users[0].name}
-    //           date = {users[0].date}
-    //           title = {users[0].title}
-    //           description = {users[0].description}
-    //           />]
-    // })
+    setState({
+      users: [ 
+      state.users,
+              <Card
+              key = {0} 
+              id = {users[0].id} 
+              name  = {users[0].name}
+              date = {users[0].date}
+              title = {users[0].title}
+              description = {users[0].description}
+              />]
+    })
   }
 
     
@@ -76,8 +103,7 @@ function App() {
 
     return (
       <Router>
-        <h1> Welcome to the Men's Shed App </h1>
-        <ul>
+          <ul>
           <li> 
           <Link to = "/disp"> View Stories </Link>
           </li>
@@ -94,6 +120,9 @@ function App() {
 
           <Route path="/upload">
             <Upload />  
+          </Route>
+          <Route path="/choose">
+            <Choose />
           </Route>
 
         </Switch>
