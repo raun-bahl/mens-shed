@@ -8,7 +8,7 @@ const Card = (props) => {
 	const {name, date, title, description, imgPath} = props;
 
 	return (
-		<div className = 'tc bg-lightest-blue dib br3 pa3 ma2 grow bw2 shadow-5'>
+		<div className = 'tc bg-lightest-blue dib br3 pa3 ma2 bw2 shadow-5'>
 			<div className = "flex justify-between">
 				<h4> {name} </h4>
 				<div className = "item">

@@ -17,6 +17,14 @@ code {
 	padding-top:0;
 }
 
+.card {
+	max-width:99%;
+	min-height: 500px;
+	margin-left: 100px;
+	background-image: url('./logo.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 /*.card {
 	max-width: 25%;
 }*/

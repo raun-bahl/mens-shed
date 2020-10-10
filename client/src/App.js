@@ -12,6 +12,7 @@ import {
   Link,
   Redirect
 } from "react-router-dom";
+import Slider from 'infinite-react-carousel';
 
 function App() {
 
@@ -19,6 +20,16 @@ function App() {
   const [state, setState] = useState({
     users: []
   });
+
+  const settings =  {
+      adaptiveHeight: true,
+      swipe: true,
+      arrows: false,
+      dots: true,
+      autoplay:true,
+      autoplaySpeed: 4000,
+      pauseOnHover: false
+  };
 
   // constructor() {
   //   super()
@@ -36,18 +47,34 @@ function App() {
 }
 
   const MainDisplay = () => {
-  return         <div className = "flex justify-between">
-          <div className = "tc">
-            <div className = "main-display">
-              <h1 className = "f-subheadline lh-title"> Men's Shed App </h1>      
+  return (
+
+    <div>
+      <div className = "flex justify-between">
+            <div className = "tc">
+              <div className = "main-display">
+                <h1 className = "f-subheadline lh-title"> Men's Shed App </h1>      
+              </div>
+            </div>
+            <div className = "main-button">
+              <Link to = "/choose">
+              <a className="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-black">Add a Story</a>
+              </Link>
             </div>
           </div>
-          <div className = "main-button">
-            <Link to = "/choose">
-            <a className="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-black">Add a Story</a>
-            </Link>
-          </div>
-        </div>
+      <div>
+          <Slider { ...settings }>
+            <div className = 'tc dib br3 pa3 ma2 grow bw2 card'>
+            </div>
+            <div className = 'tc br3 pa3 ma2 grow bw2 shadow-5 card'>
+            </div>
+            <div className = 'tc dib br3 pa3 ma2 bw2 grow shadow-5 card'>
+            </div>
+          </Slider>
+      </div>
+    </div>
+
+        )
 }
 
   const Choose = () => {
